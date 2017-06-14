@@ -1,3 +1,39 @@
-<p>
-  admin works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add a new project.</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Title:</label>
+        <br>
+        <input #newTitle>
+      </div>
+
+      <div>
+        <label>Description:</label>
+        <br>
+        <textarea #newDescription></textarea>
+      </div>
+
+      <div>
+        <label>Project Manager:</label>
+        <br>
+        <input #newProjectManager>
+      </div>
+
+      <div>
+        <label>Amount of money needed:</label>
+        <br>
+        <input #newDesiredMoney>
+      </div>
+
+      <div>
+        <label>Money raised so far:</label>
+        <br>
+        <input #newRaisedMoney>
+      </div>
+      <button (click)="submitForm(newTitle.value, newDescription.value, newProjectManager.value, newDesiredMoney.value, newRaisedMoney.value); newTitle.value=''; newDescription.value=''; newProjectManager.value=''; newDesiredMoney.value=''; newRaisedMoney.value='';">Add</button>
+    </div>
+  </div>
+</div>
