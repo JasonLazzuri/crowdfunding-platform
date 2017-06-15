@@ -1,13 +1,28 @@
-<h4>Edit Project</h4>
-<label>Title:</label>
-<input [(ngModel)]="selectedProject.title">
-<label>Description:</label>
-<input [(ngModel)]="selectedProject.description">
-<label>Project Manager:</label>
-<input [(ngModel)]="selectedProject.projectManager">
-<label>Money Needed:</label>
-<input [(ngModel)]="selectedProject.desiredMoney">
-<label>Money Raised so Far:</label>
-<input [(ngModel)]="selectedProject.raisedMoney">
-<button (click)="beginUpdatingProject(selectedProject)">Update</button>
-<button (click)="beginDeletingProject(selectedProject)">Delete</button>
+<div class="form">
+  <h4>Edit Project</h4>
+  <label>Title:</label>
+  <br>
+  <input class="form-control" [(ngModel)]="selectedProject.title">
+  <br>
+  <label>Description:</label>
+  <br>
+  <input class="form-control" [(ngModel)]="selectedProject.description">
+  <br>
+  <label>Project Manager:</label>
+  <br>
+  <input class="form-control" [(ngModel)]="selectedProject.projectManager">
+  <br>
+  <label>Money Needed:</label>
+  <br>
+  <input class="form-control" [(ngModel)]="selectedProject.desiredMoney">
+  <br>
+  <label>Money Raised so Far:</label>
+  <br>
+  <input class="form-control" [(ngModel)]="selectedProject.raisedMoney">
+  <br>
+</div>
+<div class="btn-group">
+  <button (click)="beginDeletingProject(selectedProject)">Delete</button>
+  <hr>
+  <button (click)="beginUpdatingProject(selectedProject)">Update</button>
+</div>

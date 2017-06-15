@@ -8,13 +8,14 @@
   <p>{{projectToDisplay?.raisedMoney}}</p>
 </div>
 
-<div class="panel-body">
-  <div>
+<div class="panel panel-default">
+  <div class="panel-body">
     <div>
       <label>Donate to Project:</label>
       <br>
-      <input #amountToDonate>
+      <input class="form-control" placeholder="Just enter numbers" #amountToDonate>
     </div>
-    <button (click)="submitForm(amountToDonate.value); amountToDonate.value='';">Donate</button>
+    <br>
+    <button class="btn btn-primary"(click)="submitForm(amountToDonate.value); amountToDonate.value='';">Donate</button>
   </div>
 </div>

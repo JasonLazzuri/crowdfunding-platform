@@ -1,9 +1,12 @@
 <h2>Projects</h2>
-<select (change)="onChange($event.target.value)">
+<select class="selectpicker"(change)="onChange($event.target.value)">
   <option value="allProjects" selected="selected">All Projects</option>
   <option value="over10,000">Projects that still need over $10,000</option>
   <option value="under10,000">Projects that only need $10,000 or less</option>
 </select>
+
+
+
 <div *ngFor="let project of projects | async | moneyStillNeeded:filterByMoneyStillNeeded" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(project)">{{project.title}}</h3>
@@ -13,9 +16,10 @@
       {{project.desiredMoney}}<br>
       {{project.raisedMoney}}
       <hr>
-      <div>
-        <app-edit-project [selectedProject]="project"></app-edit-project>
-      </div>
+
+    </div>
+    <div class="form">
+      <app-edit-project [selectedProject]="project"></app-edit-project>
     </div>
   </div>
 </div>

@@ -6,23 +6,23 @@
     <div>
       <label>Title:</label>
       <br>
-      <input #newTitle>
+      <input #newTitle class="form-control">
       <br>
       <label>Description:</label>
       <br>
-      <textarea #newDescription></textarea>
+      <textarea #newDescription class="form-control"></textarea>
       <br>
       <label>Project Manager:</label>
       <br>
-      <input #newProjectManager >
+      <input #newProjectManager class="form-control" >
       <br>
       <label>Amount of money needed:</label>
       <br>
-      <input #newDesiredMoney>
+      <input type="number" #newDesiredMoney class="form-control">
       <br>
       <label>Money raised so far:</label>
       <br>
-      <input #newRaisedMoney>
+      <input type="number" #newRaisedMoney class="form-control">
       <br>
       <button (click)="submitForm(newTitle.value, newDescription.value, newProjectManager.value, newDesiredMoney.value, newRaisedMoney.value); newTitle.value=''; newDescription.value=''; newProjectManager.value=''; newDesiredMoney.value=''; newRaisedMoney.value='';">Add</button>
     </div>
