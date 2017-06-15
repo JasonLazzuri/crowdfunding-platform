@@ -3,29 +3,29 @@
     <h3 class="panel-title">Add a new project.</h3>
   </div>
   <div class="panel-body">
-    <form>
+    <div>
       <label>Title:</label>
       <br>
-      <input type=”text” class="form-control" #newTitle name="title" required>
+      <input #newTitle>
       <br>
       <label>Description:</label>
       <br>
-      <textarea type=”text” class="form-control" #newDescription required></textarea>
+      <textarea #newDescription></textarea>
       <br>
       <label>Project Manager:</label>
       <br>
-      <input type=”text” class="form-control" #newProjectManager required>
+      <input #newProjectManager >
       <br>
       <label>Amount of money needed:</label>
       <br>
-      <input class="form-control"type="number" #newDesiredMoney>
+      <input #newDesiredMoney>
       <br>
       <label>Money raised so far:</label>
       <br>
-      <input class="form-control"type="number" #newRaisedMoney>
+      <input #newRaisedMoney>
       <br>
       <button (click)="submitForm(newTitle.value, newDescription.value, newProjectManager.value, newDesiredMoney.value, newRaisedMoney.value); newTitle.value=''; newDescription.value=''; newProjectManager.value=''; newDesiredMoney.value=''; newRaisedMoney.value='';">Add</button>
-    </form>
+    </div>
   </div>
 </div>
 

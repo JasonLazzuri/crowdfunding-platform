@@ -1,9 +1,20 @@
 <div>
-  <h3>{{(projectToDisplay | async)?.title}}</h3>
-  <h4>{{(projectToDisplay | async)?.projectManager}}</h4>
-  <p>{{(projectToDisplay | async)?.description}}</p>
+  <h3>{{projectToDisplay?.title}}</h3>
+  <h4>{{projectToDisplay?.projectManager}}</h4>
+  <p>{{projectToDisplay?.description}}</p>
   <h5>Amount of money needed for this project:</h5>
-  <p>{{(projectToDisplay | async)?.desiredMoney}}</p>
+  <p>{{projectToDisplay?.desiredMoney}}</p>
   <h5>Amount of money raised so far:</h5>
-  <p>{{(projectToDisplay | async)?.raisedMoney}}</p>
+  <p>{{projectToDisplay?.raisedMoney}}</p>
+</div>
+
+<div class="panel-body">
+  <div>
+    <div>
+      <label>Donate to Project:</label>
+      <br>
+      <input #amountToDonate>
+    </div>
+    <button (click)="submitForm(amountToDonate.value); amountToDonate.value='';">Donate</button>
+  </div>
 </div>

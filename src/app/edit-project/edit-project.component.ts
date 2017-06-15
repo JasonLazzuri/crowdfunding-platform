@@ -16,10 +16,10 @@ export class EditProjectComponent implements OnInit {
   ngOnInit() {
   }
 
-  beginUpdatingProject(projectToUpdate){
+  beginUpdatingProject(projectToUpdate) {
     this.projectService.updateProject(projectToUpdate);
   }
-  beginDeletingProject(projectToDelete){
+  beginDeletingProject(projectToDelete) {
     if(confirm("Are you sure you want to delete this item from the inventory?")){
       this.projectService.deleteProject(projectToDelete);
     }

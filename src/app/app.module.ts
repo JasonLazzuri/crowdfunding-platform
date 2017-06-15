@@ -12,6 +12,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { EditProjectComponent } from './edit-project/edit-project.component';
+import { MoneyStillNeededPipe } from './money-still-needed.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -28,6 +29,7 @@ export const firebaseConfig = {
     AdminComponent,
     ProjectDetailComponent,
     EditProjectComponent,
+    MoneyStillNeededPipe
   ],
   imports: [
     BrowserModule,

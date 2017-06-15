@@ -15,6 +15,7 @@ import { Project } from '../project.model';
 export class ProjectsComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  filterByMoneyStillNeeded: string = "allProjects";
 
   constructor(private router: Router, private projectService: ProjectService) { }
 
@@ -24,6 +25,10 @@ export class ProjectsComponent implements OnInit {
 
   goToDetailPage(clickedProject) {
     this.router.navigate(['projects', clickedProject.$key]);
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByMoneyStillNeeded = optionFromMenu;
   }
 
 }
